@@ -11,6 +11,25 @@
  *}
 {include file="frontend/components/header.tpl" pageTitle="about.submissions"}
 
+<style>
+    .page_submissions {
+        font-size: calc(1em + 2px);
+    }
+    .page_submissions h4 {
+        font-size: calc(1em + 2px);
+        font-weight: bold;
+        color: #4f4f4f;
+    }
+    .page_submissions h6 {
+        font-size: calc(1em + 2px);
+        font-weight: bold;
+        color: #4f4f4f;
+    }
+    .page_submissions strong {
+        color: #4f4f4f;
+    }
+</style>
+
 <div class="page page_submissions container">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.submissions"}
 	
@@ -38,7 +57,7 @@
 	{if $submissionChecklist}
 		<div class="">
 			<h4>
-				{translate key="about.submissionPreparationChecklist"}
+				<strong>{translate key="about.submissionPreparationChecklist"}</strong>
 				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="workflow" anchor="submission/submissionChecklist" sectionTitleKey="about.submissionPreparationChecklist"}
 			</h4>
 			{translate key="about.submissionPreparationChecklist.description"}
@@ -56,7 +75,7 @@
 	<hr class="my-4">
 	<div class="author_guidelines" id="authorGuidelines">
 		<h4>
-			{translate key="about.authorGuidelines"}
+			<strong>{translate key="about.authorGuidelines"}</strong>
 			{include file="frontend/components/editLink.tpl" page="management" op="settings" path="workflow" anchor="submission/authorGuidelines" sectionTitleKey="about.authorGuidelines"}
 		</h4>
 		{$currentContext->getLocalizedData('authorGuidelines')}

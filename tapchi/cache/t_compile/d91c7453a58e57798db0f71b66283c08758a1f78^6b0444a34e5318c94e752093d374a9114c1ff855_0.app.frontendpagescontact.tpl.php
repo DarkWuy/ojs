@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-05-01 14:55:01
+/* Smarty version 4.1.0, created on 2024-10-20 15:14:57
   from 'app:frontendpagescontact.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_644fb6a59cfc68_79249661',
+  'unifunc' => 'content_67150251589788_06115595',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6b0444a34e5318c94e752093d374a9114c1ff855' => 
     array (
       0 => 'app:frontendpagescontact.tpl',
-      1 => 1675470469,
+      1 => 1729430096,
       2 => 'app',
     ),
   ),
@@ -24,21 +24,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'app:frontend/components/footer.tpl' => 1,
   ),
 ),false)) {
-function content_644fb6a59cfc68_79249661 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\ojs\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\function.mailto.php','function'=>'smarty_function_mailto',),));
+function content_67150251589788_06115595 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\tapchi1\\Newfolder\\tapchi\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\function.mailto.php','function'=>'smarty_function_mailto',),));
 $_smarty_tpl->_subTemplateRender("app:frontend/components/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('pageTitle'=>"about.contact"), 0, false);
 ?>
-
+<style>
+	.page_contact h3 , .name, .title, .affiliation, .phone, .email{
+		font-size: calc(1em + 2px);
+		color: #4f4f4f;
+	}
+	.page_contact h1 {
+		font-size: calc(1em + 10px);
+		color: #4f4f4f;
+	}
+</style>
 <div class="page page_contact">
 	<?php $_smarty_tpl->_subTemplateRender("app:frontend/components/breadcrumbs.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('currentTitleKey'=>"about.contact"), 0, false);
 ?>
 	<h1>
-		<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.contact"),$_smarty_tpl ) );?>
-
+		<strong style="color: #4f4f4f;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.contact"),$_smarty_tpl ) );?>
+</strong>
 	</h1>
 	<?php $_smarty_tpl->_subTemplateRender("app:frontend/components/editLink.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('page'=>"management",'op'=>"settings",'path'=>"context",'anchor'=>"contact",'sectionTitleKey'=>"about.contact"), 0, false);
 ?>
-
+	
 		<div class="contact_section">
 
 		<?php if ($_smarty_tpl->tpl_vars['mailingAddress']->value) {?>
@@ -51,8 +60,8 @@ $_smarty_tpl->_subTemplateRender("app:frontend/components/header.tpl", $_smarty_
 				<?php if ($_smarty_tpl->tpl_vars['contactTitle']->value || $_smarty_tpl->tpl_vars['contactName']->value || $_smarty_tpl->tpl_vars['contactAffiliation']->value || $_smarty_tpl->tpl_vars['contactPhone']->value || $_smarty_tpl->tpl_vars['contactEmail']->value) {?>
 			<div class="contact primary">
 				<h3>
-					<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.contact.principalContact"),$_smarty_tpl ) );?>
-
+					<strong style="color: #4f4f4f;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.contact.principalContact"),$_smarty_tpl ) );?>
+</strong>
 				</h3>
 
 				<?php if ($_smarty_tpl->tpl_vars['contactName']->value) {?>
@@ -101,8 +110,8 @@ $_smarty_tpl->_subTemplateRender("app:frontend/components/header.tpl", $_smarty_
 				<?php if ($_smarty_tpl->tpl_vars['supportName']->value || $_smarty_tpl->tpl_vars['supportPhone']->value || $_smarty_tpl->tpl_vars['supportEmail']->value) {?>
 			<div class="contact support">
 				<h3>
-					<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.contact.supportContact"),$_smarty_tpl ) );?>
-
+					<strong style="color: #4f4f4f;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.contact.supportContact"),$_smarty_tpl ) );?>
+</strong>
 				</h3>
 
 				<?php if ($_smarty_tpl->tpl_vars['supportName']->value) {?>

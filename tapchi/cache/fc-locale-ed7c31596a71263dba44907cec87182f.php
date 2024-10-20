@@ -142,6 +142,6 @@
   'user.authorization.accessDenied' => 'Quyền truy cập bị từ chối.',
   'user.affiliations' => 'Các liên kết (viện, trường ...)',
   'user.affiliation.description' => '(là viện, trường mỗi tác giả trực thuộc hoặc hợp tác, ví dụ "Đại học Quốc Gia Hà Nội hay Viện Vật lý")',
-  'user.affiliation' => 'Liên kết ORCID',
+  'user.affiliation' => 'Liên kết',
   'user.accountInformation' => 'Thông tin tài khoản',
 );

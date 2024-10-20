@@ -12,7 +12,15 @@
 <div class="page container">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitle=$title}
 
-	{$content}
+	<style>
+		.page-content {
+			font-size: calc(1em + 2px);
+		}
+	</style>
+
+	<div class="page-content">
+		{$content}
+	</div>
 </div>
 
 {include file="frontend/components/footer.tpl"}

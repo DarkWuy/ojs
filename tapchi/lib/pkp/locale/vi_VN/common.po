@@ -2027,3 +2027,48 @@ msgstr "Đã xem xét tệp."
 
 msgid "notification.type.reviewerComment"
 msgstr "Một phản biện đã bình luận về \"{$title}\"."
+
+msgid "journal.title"
+msgstr "TẠP CHÍ KHOA HỌC"
+
+msgid "submission.dateDecided"
+msgstr "Ngày xuất bản"
+
+msgid "common.contactAuthor"
+msgstr "Liên hệ tác giả"
+
+msgid "article.summary"
+msgstr "Tóm tắt"
+
+msgid "footer.journal_title"
+msgstr "TẠP CHÍ KHOA HỌC"
+
+msgid "footer.university_name"
+msgstr "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT VĨNH LONG"
+
+msgid "footer.management_agency"
+msgstr "Cơ quan chủ quản: Trường Đại học Sư Phạm Kỹ Thuật Vĩnh Long"
+
+msgid "footer.license_number"
+msgstr "Giấy phép hoạt động số: xxx/GP-BTTTT ngày dd-mm-2023"
+
+msgid "footer.licensing_agency"
+msgstr "Cơ quan cấp phép: Bộ Thông tin và Truyền thông"
+
+msgid "footer.editor_in_chief"
+msgstr "Tổng biên tập PGS.TS Nguyễn Thanh Tùng"
+
+msgid "footer.address"
+msgstr "Địa chỉ: 73 Nguyễn Huệ Phường 2 TP. Vĩnh Long"
+
+msgid "footer.tel"
+msgstr "Tel: (+84) 02703822141 - Fax: (+84) 02703821003"
+
+msgid "footer.website"
+msgstr "Website: http://vlute.edu.vn"
+
+msgid "footer.email"
+msgstr "Email: tapchikhoahoc@vlute.edu.vn"
+
+msgid "footer.copyright"
+msgstr "Copyright © 2023 - Thiết kế & phát triển bởi FIT"

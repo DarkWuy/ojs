@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-04-25 17:07:13
+/* Smarty version 4.1.0, created on 2024-10-20 16:20:43
   from 'app:frontendpagesuserLogin.tp' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6447eca1c2db23_53484602',
+  'unifunc' => 'content_671511bb5c2e03_18407983',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bd04826a47a63ab4c25ca20ffc3b42835fcab481' => 
     array (
       0 => 'app:frontendpagesuserLogin.tp',
-      1 => 1681396410,
+      1 => 1729434023,
       2 => 'app',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'app:frontend/components/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6447eca1c2db23_53484602 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671511bb5c2e03_18407983 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("app:frontend/components/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('pageTitle'=>"user.login"), 0, false);
 ?>
 

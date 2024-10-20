@@ -9,11 +9,11 @@
  *}
 <div id="articlesBySameAuthorList">
 	{if $noMetricSelected}
-		<h3>{translate key="plugins.generic.recommendByAuthor.heading"}</h3>
+		<h3><strong>{translate key="plugins.generic.recommendByAuthor.heading"}</strong></h3>
 		{translate key="plugins.generic.recommendByAuthor.noMetric"}
 	{else}
 		{if !$articlesBySameAuthor->wasEmpty()}
-			<h3>{translate key="plugins.generic.recommendByAuthor.heading"}</h3>
+			<h3><strong>{translate key="plugins.generic.recommendByAuthor.heading"}</strong></h3>
 
 			<ul>
 				{iterate from=articlesBySameAuthor item=articleBySameAuthor}

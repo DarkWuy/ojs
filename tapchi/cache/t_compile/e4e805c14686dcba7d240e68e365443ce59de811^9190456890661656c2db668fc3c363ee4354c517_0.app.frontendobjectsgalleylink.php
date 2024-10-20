@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-06-22 04:03:19
+/* Smarty version 4.1.0, created on 2024-10-20 16:20:54
   from 'app:frontendobjectsgalleylink' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6493abe732db52_89774802',
+  'unifunc' => 'content_671511c6e4a990_63027567',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9190456890661656c2db668fc3c363ee4354c517' => 
     array (
       0 => 'app:frontendobjectsgalleylink',
-      1 => 1681396410,
+      1 => 1729434023,
       2 => 'app',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6493abe732db52_89774802 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671511c6e4a990_63027567 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['journalOverride']->value) {?>
 	<?php $_smarty_tpl->_assignInScope('currentJournal', $_smarty_tpl->tpl_vars['journalOverride']->value);
 }?>
@@ -70,8 +70,12 @@ if ($_smarty_tpl->tpl_vars['restricted']->value) {?> restricted btn btn-danger<?
 		</span>
 	<?php }?>
 
-	<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['galley']->value->getGalleyLabel() ));?>
+	<?php if ($_smarty_tpl->tpl_vars['currentLocale']->value == "en_US" && $_smarty_tpl->tpl_vars['galley']->value->getLocale() == "vi_VN") {?>
+		PDF (Vietnamese)
+	<?php } else { ?>
+		<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['galley']->value->getGalleyLabel() ));?>
 
+	<?php }?>
 
 	<?php if ($_smarty_tpl->tpl_vars['restricted']->value && $_smarty_tpl->tpl_vars['purchaseFee']->value && $_smarty_tpl->tpl_vars['purchaseCurrency']->value) {?>
 		<span class="purchase_cost">

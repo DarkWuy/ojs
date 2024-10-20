@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-04-27 15:14:27
+/* Smarty version 4.1.0, created on 2024-10-20 16:20:46
   from 'app:frontendcomponentsnavigat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_644a7533480f21_50824935',
+  'unifunc' => 'content_671511be2445c4_80372058',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fefaa077fc48a1d5d4ed61022fa881bddab3649b' => 
     array (
       0 => 'app:frontendcomponentsnavigat',
-      1 => 1681396410,
+      1 => 1729434023,
       2 => 'app',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'app:frontend/components/navigationMenu2.tpl' => 1,
   ),
 ),false)) {
-function content_644a7533480f21_50824935 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671511be2445c4_80372058 (Smarty_Internal_Template $_smarty_tpl) {
 ?><button
     type="button"
     class="navbar-toggler text-white d-lg-none"
@@ -40,7 +40,15 @@ function content_644a7533480f21_50824935 (Smarty_Internal_Template $_smarty_tpl)
 			</div>
 			<div class="modal-body">
 	      		<div>
-		      		<?php $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, 'default', "primaryMenu", null);?>
+					<style>
+						/* Thay đổi font chữ cho thuộc tính có id = _navigationPrimary */
+						#_navigationPrimary {
+							font-family: 'Arial', sans-serif; /* Thay đổi 'Arial' thành font bạn muốn sử dụng */
+							font-size: 54px; /* Thay đổi kích thước font chữ nếu cần */
+							color: #333; /* Màu chữ */
+						}
+					</style>
+					<?php $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, 'default', "primaryMenu", null);?>
 						<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['load_menu'][0], array( array('name'=>"primary",'id'=>"_navigationPrimary",'ulClass'=>"_pkp_navigation_primary d-block",'liClass'=>"text-dark"),$_smarty_tpl ) );?>
 
 					<?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);?>
@@ -63,5 +71,6 @@ function content_644a7533480f21_50824935 (Smarty_Internal_Template $_smarty_tpl)
 			</div>
 		</div>
 	</div>
-</div><?php }
+</div>
+<?php }
 }

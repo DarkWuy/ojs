@@ -116,7 +116,7 @@
 		{if $section.articles}
 			{if $section.title}
 				<h2 class="accordion-header" id="accordion-header-{$sectionCounter}">
-					<button class="accordion-button collapsed px-0 text-start" type="button" data-mdb-toggle="collapse" data-mdb-target="#accordion-collapse-{$sectionCounter}" aria-expanded="false" aria-controls="accordion-collapse-{$sectionCounter}">
+					<button class="accordion-button px-0 text-start" type="button" data-mdb-toggle="collapse" data-mdb-target="#accordion-collapse-{$sectionCounter}" aria-expanded="true" aria-controls="accordion-collapse-{$sectionCounter}">
 						{$section.title|escape}
 					</button>
 				</h2>
@@ -142,6 +142,10 @@
 </div>
 <div class="entry_details"> 	
 						<div class="item published">
+							<a href="#">
+							<img src="http://tapchikhoahoc.vlute.edu.vn/public/journals/1/homepageImage_vi_VN.jpg" style="width: 75%">
+							</a>
+							<hr class="my-4" />
 						 	<a href="https://scholar.google.com">
 							<img src="https://scholar.google.com/intl/vi/scholar/images/1x/scholar_logo_64dp.png" style="width: 75%">
 							</a>
@@ -156,3 +160,4 @@
 							</div>
 							
 		</div></div></div>
+

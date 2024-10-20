@@ -38,7 +38,7 @@
 		</div>
 	{/if}
 
-	<{$heading} class="title text-start text-md-start">
+	<{$heading} class="title text-start text-md-start" style="font-size: 1.15rem;">
 		<a id="article-{$article->getId()}" {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
 			{$article->getLocalizedTitle()|strip_unsafe_html}
 			{if $article->getLocalizedSubtitle()}
@@ -88,6 +88,10 @@
 						{assign var="hasArticleAccess" value=1}
 					{/if}
 					{include file="frontend/objects/galley_link.tpl" parent=$article labelledBy="article-{$article->getId()}" hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
+					<!-- Nút tóm tắt -->
+					<button class="btn btn-info" onclick="toggleAbstract('{$article->getLocalizedAbstract()|escape}', 'abstract-{$article->getId()}')" style="font-size: 0.9em;">{translate key="article.summary"}</button>
+					<!-- Phần để hiển thị tóm tắt -->
+					<div id="abstract-{$article->getId()}" class="abstract-display larger-abstract" style="display:none; border: 1px solid #ccc; padding: 10px; margin-top: 10px; font-family: 'Georgia', serif; line-height: 1.6; font-size: 1.1em;"></div>
 				</li>
 			{/foreach}
 		</ul>
@@ -95,3 +99,16 @@
 
 	{call_hook name="Templates::Issue::Issue::Article"}
 </div>
+
+<script>
+    function toggleAbstract(abstract, elementId) {
+        const abstractDisplay = document.getElementById(elementId);
+        // Kiểm tra trạng thái hiển thị
+        if (abstractDisplay.style.display === 'none') {
+            abstractDisplay.innerHTML = abstract;
+            abstractDisplay.style.display = 'block';
+        } else {
+            abstractDisplay.style.display = 'none';
+        }
+    }
+</script>

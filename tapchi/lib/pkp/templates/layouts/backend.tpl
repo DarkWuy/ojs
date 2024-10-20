@@ -33,7 +33,7 @@
 	</script>
 
 	<div id="app" class="app {if $isLoggedInAs} app--isLoggedInAs{/if}">
-		<header class="app__header" role="banner">
+		<header class="app__header" role="banner" style="background-color: #070758;">
 			{if $availableContexts}
 				<dropdown class="app__headerAction app__contexts" v-cloak>
 					<template slot="button">
@@ -176,9 +176,13 @@
 										<ul>
 						<li>
 							<ul>
-								<li >
-									<a class="app__navItem"href="http://localhost/link/admin/">
-									Quản trị đường dẫn 
+									<li>
+									<a class="app__navItem" href="http://localhost/link/admin/">
+										{if $currentLocale == 'vi_VN'}
+											Quản trị đường dẫn
+										{else}
+											Path Management
+										{/if}
 									</a>
 								</li>
 							</ul>

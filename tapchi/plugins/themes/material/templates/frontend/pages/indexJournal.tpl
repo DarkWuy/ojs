@@ -15,69 +15,42 @@
  *       homepage
  * @uses $issue Issue Current issue
  *}
-{include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
+ {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
 <div class="page_index_journal container">
 
-	{call_hook name="Templates::Index::journal"}
+    {* Announcements và các phần khác không cần thay đổi *}
 
-	{* Additional Homepage Content *}
-	{if $additionalHomeContent}
-		<div class="additional_content">
-			{$additionalHomeContent}
-		</div>
-	{/if}
-
-	{* Announcements *}
-	{if $numAnnouncementsHomepage && $announcements|@count}
-		<section class="cmp_announcements highlight_first mx-0" data-aos="fade-up" data-aos-delay="200" >
-			<a id="homepageAnnouncements"></a>
-			<h2>
-				{translate key="announcement.announcements"}
-			</h2>
-			{foreach name=announcements from=$announcements item=announcement}
-				{if $smarty.foreach.announcements.iteration > $numAnnouncementsHomepage}
-					{break}
-				{/if}
-				{if $smarty.foreach.announcements.iteration == 1}
-					{include file="frontend/objects/announcement_summary.tpl" heading="h3"}
-					<div class="more">
-				{else}
-					<article class="obj_announcement_summary">
-						<h4>
-							<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()}">
-								{$announcement->getLocalizedTitle()|escape}
-							</a>
-						</h4>
-						<div class="date">
-							{$announcement->getDatePosted()|date_format:$dateFormatShort}
-						</div>
-					</article>
-				{/if}
-			{/foreach}
-			</div><!-- .more -->
-		</section>
-	{/if}
-		
-	{* Latest issue *}
-	{if $issue}
-	
-		<section class="current_issue pt-5" data-aos="fade-up" data-aos-delay="200">
-			<a id="homepageIssue"></a>
-			<h2>
-				{translate key="journal.currentIssue"}
-			</h2>
-			<div class="current_issue_title">
-				{$issue->getIssueIdentification()|strip_unsafe_html}
-			</div>
-			{include file="frontend/objects/issue_toc.tpl" heading="h3"}
-			<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
-				{translate key="journal.viewAllIssues"}
-			</a>
-		</section>
-	{/if}
-
+    {* Latest issue *}
+    {if $issue}
+        <section class="current_issue pt-5" data-aos="fade-up" data-aos-delay="200">
+           <div class="current_issue_container rounded p-1 d-flex align-items-center" style="max-width: 910px; max-height: 40px;background-color: #ecf0f1; border: none;">
+    <a id="homepageIssue" class="homepageIssue " href="javascript:void(0)" onclick="toggleHeading()">
+        {translate key="journal.currentIssue"}
+    </a>
+    <span class="mx-2">/</span>
+    <div class="current_issue_title">
+        {$issue->getIssueIdentification()|strip_unsafe_html}
+    </div>
+</div>
+            {include file="frontend/objects/issue_toc.tpl" heading="h3" class="heading" htmlAttributes='hidden="true"'} <!-- Sửa hidden -->
+            <a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
+                {translate key="journal.viewAllIssues"}
+            </a>
+        </section>
+    {/if}
 </div><!-- .page -->
 
-
 {include file="frontend/components/footer.tpl"}
+
+{* JavaScript để ẩn/hiển phần tử *}
+<script>
+function toggleHeading() {
+    var heading = document.querySelector('[class="heading"]');  // Sử dụng querySelector với class
+    if (heading.hasAttribute('hidden')) {
+        heading.removeAttribute('hidden');
+    } else {
+        heading.setAttribute('hidden', 'true');
+    }
+}
+</script>

@@ -16,7 +16,14 @@
 	
 	{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.aboutContext"}
 
-	{$currentContext->getLocalizedData('about')}
+	<style>
+        .page_about .about_content {
+            font-size: calc(1em + 2px);
+        }
+    </style>
+    <div class="about_content">
+        {$currentContext->getLocalizedData('about')}
+    </div>
 </div><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

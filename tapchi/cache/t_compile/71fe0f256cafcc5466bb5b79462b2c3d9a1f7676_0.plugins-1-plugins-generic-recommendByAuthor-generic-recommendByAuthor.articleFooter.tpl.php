@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-05-04 04:15:26
+/* Smarty version 4.1.0, created on 2024-10-20 16:20:55
   from 'plugins-1-plugins-generic-recommendByAuthor-generic-recommendByAuthor:articleFooter.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6453153ec3e046_53114000',
+  'unifunc' => 'content_671511c72f7412_70550614',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '71fe0f256cafcc5466bb5b79462b2c3d9a1f7676' => 
     array (
       0 => 'plugins-1-plugins-generic-recommendByAuthor-generic-recommendByAuthor:articleFooter.tpl',
-      1 => 1675470231,
+      1 => 1729434022,
       2 => 'plugins-1-plugins-generic-recommendByAuthor-generic-recommendByAuthor',
     ),
   ),
@@ -20,17 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6453153ec3e046_53114000 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671511c72f7412_70550614 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="articlesBySameAuthorList">
 	<?php if ($_smarty_tpl->tpl_vars['noMetricSelected']->value) {?>
-		<h3><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"plugins.generic.recommendByAuthor.heading"),$_smarty_tpl ) );?>
-</h3>
+		<h3><strong><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"plugins.generic.recommendByAuthor.heading"),$_smarty_tpl ) );?>
+</strong></h3>
 		<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"plugins.generic.recommendByAuthor.noMetric"),$_smarty_tpl ) );?>
 
 	<?php } else { ?>
 		<?php if (!$_smarty_tpl->tpl_vars['articlesBySameAuthor']->value->wasEmpty()) {?>
-			<h3><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"plugins.generic.recommendByAuthor.heading"),$_smarty_tpl ) );?>
-</h3>
+			<h3><strong><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"plugins.generic.recommendByAuthor.heading"),$_smarty_tpl ) );?>
+</strong></h3>
 
 			<ul>
 				<?php $_block_plugin1 = isset($_smarty_tpl->smarty->registered_plugins['block']['iterate'][0][0]) ? $_smarty_tpl->smarty->registered_plugins['block']['iterate'][0][0] : null;

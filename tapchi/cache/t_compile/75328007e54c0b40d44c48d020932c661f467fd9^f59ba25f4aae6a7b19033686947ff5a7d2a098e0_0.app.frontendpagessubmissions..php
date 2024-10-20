@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-04-27 05:49:24
+/* Smarty version 4.1.0, created on 2024-10-20 15:09:07
   from 'app:frontendpagessubmissions.' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6449f0c4c7ecc3_08649441',
+  'unifunc' => 'content_671500f3d5de91_16813627',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f59ba25f4aae6a7b19033686947ff5a7d2a098e0' => 
     array (
       0 => 'app:frontendpagessubmissions.',
-      1 => 1681396410,
+      1 => 1729429743,
       2 => 'app',
     ),
   ),
@@ -24,9 +24,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'app:frontend/components/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6449f0c4c7ecc3_08649441 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671500f3d5de91_16813627 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("app:frontend/components/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('pageTitle'=>"about.submissions"), 0, false);
 ?>
+
+<style>
+    .page_submissions {
+        font-size: calc(1em + 2px);
+    }
+    .page_submissions h4 {
+        font-size: calc(1em + 2px);
+        font-weight: bold;
+        color: #4f4f4f;
+    }
+    .page_submissions h6 {
+        font-size: calc(1em + 2px);
+        font-weight: bold;
+        color: #4f4f4f;
+    }
+    .page_submissions strong {
+        color: #4f4f4f;
+    }
+</style>
 
 <div class="page page_submissions container">
 	<?php $_smarty_tpl->_subTemplateRender("app:frontend/components/breadcrumbs.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('currentTitleKey'=>"about.submissions"), 0, false);
@@ -67,8 +86,8 @@ $_smarty_tpl->_subTemplateRender("app:frontend/components/header.tpl", $_smarty_
 	<?php if ($_smarty_tpl->tpl_vars['submissionChecklist']->value) {?>
 		<div class="">
 			<h4>
-				<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.submissionPreparationChecklist"),$_smarty_tpl ) );?>
-
+				<strong><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.submissionPreparationChecklist"),$_smarty_tpl ) );?>
+</strong>
 				<?php $_smarty_tpl->_subTemplateRender("app:frontend/components/editLink.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('page'=>"management",'op'=>"settings",'path'=>"workflow",'anchor'=>"submission/submissionChecklist",'sectionTitleKey'=>"about.submissionPreparationChecklist"), 0, false);
 ?>
 			</h4>
@@ -96,8 +115,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 	<hr class="my-4">
 	<div class="author_guidelines" id="authorGuidelines">
 		<h4>
-			<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.authorGuidelines"),$_smarty_tpl ) );?>
-
+			<strong><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.authorGuidelines"),$_smarty_tpl ) );?>
+</strong>
 			<?php $_smarty_tpl->_subTemplateRender("app:frontend/components/editLink.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('page'=>"management",'op'=>"settings",'path'=>"workflow",'anchor'=>"submission/authorGuidelines",'sectionTitleKey'=>"about.authorGuidelines"), 0, true);
 ?>
 		</h4>

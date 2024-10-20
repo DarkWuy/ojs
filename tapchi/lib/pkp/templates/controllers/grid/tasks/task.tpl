@@ -20,6 +20,7 @@
 	<span class="message">
 		{$message}
 	</span>
+</span>
 	<div class="details">
 		{if $isMultiContext}
 			<span class="acronym">

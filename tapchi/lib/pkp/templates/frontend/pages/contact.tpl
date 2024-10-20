@@ -19,14 +19,23 @@
  * @uses $supportEmail string Support contact email address
  *}
 {include file="frontend/components/header.tpl" pageTitle="about.contact"}
-
+<style>
+	.page_contact h3 , .name, .title, .affiliation, .phone, .email{
+		font-size: calc(1em + 2px);
+		color: #4f4f4f;
+	}
+	.page_contact h1 {
+		font-size: calc(1em + 10px);
+		color: #4f4f4f;
+	}
+</style>
 <div class="page page_contact">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.contact"}
 	<h1>
-		{translate key="about.contact"}
+		<strong style="color: #4f4f4f;">{translate key="about.contact"}</strong>
 	</h1>
 	{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="contact" sectionTitleKey="about.contact"}
-
+	
 	{* Contact section *}
 	<div class="contact_section">
 
@@ -40,7 +49,7 @@
 		{if $contactTitle || $contactName || $contactAffiliation || $contactPhone || $contactEmail}
 			<div class="contact primary">
 				<h3>
-					{translate key="about.contact.principalContact"}
+					<strong style="color: #4f4f4f;">{translate key="about.contact.principalContact"}</strong>
 				</h3>
 
 				{if $contactName}
@@ -84,7 +93,7 @@
 		{if $supportName || $supportPhone || $supportEmail}
 			<div class="contact support">
 				<h3>
-					{translate key="about.contact.supportContact"}
+					<strong style="color: #4f4f4f;">{translate key="about.contact.supportContact"}</strong>
 				</h3>
 
 				{if $supportName}

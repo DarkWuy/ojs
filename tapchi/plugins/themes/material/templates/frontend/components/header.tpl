@@ -27,51 +27,46 @@
 {if $requestedPage !== 'login' && $requestedPage !== 'user'}
 
 	<!-- ======= Header ======= -->
-	<header id="header" class="fixed-top d-flex align-items-center">
-  	{* Skip to content nav links *}
-	{* include file="frontend/components/skipLinks.tpl"*}
+	
+	<header id="header" class="fixed-top d-flex align-items-center header-scrolled" style="background-color: #070758;">
+	
     <div class="container d-flex justify-content-between align-items-center">
-    	<div class="logo">
-    		{if $displayPageHeaderLogo}
-				<a href="{url page="index" router=$smarty.const.ROUTE_PAGE}" class="navbar-brand _is_img">
-					<img
-						src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}"
-						width="{$displayPageHeaderLogo.width|escape}"
-						height="{$displayPageHeaderLogo.height|escape}"
-						{if $displayPageHeaderLogo.altText != ''}
-							alt="{$displayPageHeaderLogo.altText|escape}"
-						{/if}
-						class="img-fluid"
-						style="max-width: 100px;"/>
-				</a>
-			{else}
-				<!--a class="navbar-brand text-white" href="#">
-					<strong>OJS App</strong>
-				</a-->
-			{/if}
-		</div>
+        <div class="logo">
+            {if $displayPageHeaderLogo}
+                <a href="{url page="index" router=$smarty.const.ROUTE_PAGE}" class="navbar-brand _is_img">
+                    <img
+                        src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}"
+                        width="{$displayPageHeaderLogo.width|escape}"
+                        height="{$displayPageHeaderLogo.height|escape}"
+                        {if $displayPageHeaderLogo.altText != ''}
+                            alt="{$displayPageHeaderLogo.altText|escape}"
+                        {/if}
+                        class="img-fluid"
+                        style="max-width: 100px;" />
+                </a>
+            {/if}
+        </div>
 
-		<nav id="navbar" class="navbar navbar-dark flex-row shadow-0">
-			{capture assign="primaryMenu"}
-				{load_menu name="primary" id="_navigationPrimary" ulClass="_pkp_navigation_primary" liClass=""}
-			{/capture}
+        <nav id="navbar" class="navbar navbar-dark flex-row shadow-0">
+            {capture assign="primaryMenu"}
+                {load_menu name="primary" id="_navigationPrimary" ulClass="_pkp_navigation_primary" liClass=""}
+            {/capture}
+            {$primaryMenu}
+        </nav>
 
-			{* Primary navigation menu for current application *}
-			{$primaryMenu}
-      	</nav><!-- .navbar -->
-
-      	<nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar d-flex flex-column shadow-0">
-			<div class="container">
-				<div class="navbar-collapse d-flex justify-content-end">
-					{include file="frontend/components/navigationMenu2.tpl"}
-					{* User navigation *}
-					{load_menu name="user" id="_navigationUser" ulClass="_pkp_navigation_user flex-row justify-content-end" liClass="profile px-2 px-md-0"}
-				</div>
-			</div>
-		</nav>
-      	{include file="frontend/components/navigationMenuMobile.tpl"}
+        <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar d-flex flex-column shadow-0">
+            <div class="container">
+                <div class="navbar-collapse d-flex justify-content-end">
+                    {include file="frontend/components/navigationMenu2.tpl"}
+                    {load_menu name="user" id="_navigationUser" ulClass="_pkp_navigation_user flex-row justify-content-end" liClass="profile px-2 px-md-0"}
+					
+			    </div>
+            </div>
+        </nav>
+        {include file="frontend/components/navigationMenuMobile.tpl"}
     </div>
-  </header><!-- End Header -->
+</header>
+
 
   {if $requestedPage == 'index' || $requestedPage == ''}
 	  <!-- ======= Hero Section ======= -->
@@ -86,7 +81,7 @@
 	        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 	          <g id="Apple-TV" transform="translate(0.000000, -402.000000)" fill="#FFFFFF">
 	            <path d="M0,439.134243 C175.04074,464.89273 327.944386,477.771974 458.710937,477.771974 C654.860765,477.771974 870.645295,442.632362 1205.9828,410.192501 C1429.54114,388.565926 1667.54687,411.092417 1920,477.771974 L1920,757 L1017.15166,757 L0,757 L0,439.134243 Z" id="Path"></path>
-	          </g>
+	          </g>s
 	        </g>
 	      </svg>
 
@@ -98,7 +93,8 @@
 	          <div class="row">
 	            <div class="col-lg-8 text-center text-lg-start">
 				<h1 data-aos="fade-right" class="aos-init aos-animate" >
-	              	TẠP CHÍ KHOA HỌC</h1>
+				{translate key="journal.title"}
+	              	</h1>
 				
 	              <h1 data-aos="fade-right" style="font-size:30px">
 	              	{$displayPageHeaderTitle|escape}
@@ -121,9 +117,7 @@
 	            <div class="col-lg-4 iphone-wrap">
 
 									{assign var="thumb" value=$currentJournal->getLocalizedSetting('journalThumbnail')}
-									{if $thumb}
-										<img class="phone-2" data-aos="fade-right" src="{$publicFilesDir}{*$currentJournal->getId()*}/{$thumb.uploadName|escape:"url"}">
-									{/if}
+									
 																
 	              <!--img src="assets/img/phone_1.png" alt="Image" class="phone-1" data-aos="fade-right"-->
 	              <!--img src="assets/img/phone_2.png" alt="Image" class="phone-2" data-aos="fade-right" data-aos-delay="200"-->
@@ -135,8 +129,6 @@
 
 	  </section><!-- End Hero -->
 	{/if}
-
-
 
 	{* Wrapper for page content and sidebars *}
 	{if $isFullWidth}

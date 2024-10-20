@@ -451,7 +451,7 @@ class Issue extends DataObject {
 			'showVolume' => $this->getData('showVolume'),
 			'showNumber' => $this->getData('showNumber'),
 			'showYear' => $this->getData('showYear'),
-			'showTitle' => $this->getData('showTitle'),
+			// 'showTitle' => $this->getData('showTitle'),
 		);
 
 		$displayOptions = array_merge($displayOptions, $force);
@@ -479,11 +479,19 @@ class Issue extends DataObject {
 			}
 
 			if ($opt == 'showVolume') {
-				$identification[] = "$volLabel $vol";
+				if ($locale === 'en_US') { // Kiểm tra ngôn ngữ tiếng Anh
+					$identification[] = "Vol. $vol";
+				} else { // Ngôn ngữ khác (tiếng Việt)
+					$identification[] = "Tập. $vol";
+				}
 			} elseif ($opt == 'showNumber') {
-				$identification[] = "$numLabel $num";
+				if ($locale === 'en_US') { // Kiểm tra ngôn ngữ tiếng Anh
+					$identification[] = "No. $num";
+				} else { // Ngôn ngữ khác (tiếng Việt)
+					$identification[] = "Số. $num";
+				}
 			} elseif ($opt == 'showYear') {
-				$identification[] = !empty($identification) ? "($year)" : $year;
+				$identification[] = "($year)"; // Có thể giữ nguyên cho cả hai ngôn ngữ
 			} elseif ($opt == 'showTitle' ) {
 				if (!empty($title)) {
 					// Append a separator to the last key

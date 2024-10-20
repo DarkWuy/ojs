@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-04-30 18:02:46
+/* Smarty version 4.1.0, created on 2024-10-07 16:27:43
   from 'app:frontendcomponentsnavigat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_644e9126577fc4_65145746',
+  'unifunc' => 'content_6703efdfe0a966_93369225',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1691b77e190980db1df5625a01cc71407940ba9a' => 
     array (
       0 => 'app:frontendcomponentsnavigat',
-      1 => 1681396410,
+      1 => 1728279476,
       2 => 'app',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_644e9126577fc4_65145746 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\ojs\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
+function content_6703efdfe0a966_93369225 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'D:\\Xampp\\htdocs\\tapchi\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
 $_smarty_tpl->_assignInScope('locales', $_smarty_tpl->tpl_vars['currentJournal']->value->getSupportedLocaleNames());?>
 
 <ul class="navbar-nav mr-auto flex-row <?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['ulClass']->value ));?>

@@ -251,7 +251,7 @@ filename_revision_match = 70
 [security]
 
 ; Force SSL connections site-wide and also sets the "Secure" flag for session cookies
-; See https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure
+; See https://developer.mozilla.org//docs/Web/HTTP/Headers/Set-Cookie#secure
 force_ssl = Off
 
 ; Force SSL connections for login only

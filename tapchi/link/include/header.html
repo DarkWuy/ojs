@@ -1,3 +1,22 @@
+
+<style>
+    /* Thay đổi font chữ, kích thước và màu sắc cho menu điều hướng */
+    #_navigationPrimary {
+        font-family: 'Arial', sans-serif !important; /* Chọn font chữ */
+        font-size: 16px !important; /* Kích thước chữ */
+        color: #fff !important; /* Màu chữ */
+    }
+
+    /* Thay đổi màu cho các liên kết trong menu */
+    #_navigationPrimary .nav-link {
+        color: #fff !important; /* Màu chữ cho các liên kết */
+    }
+
+    #_navigationPrimary .nav-link:hover {
+        color: #ffd700 !important; /* Màu chữ khi hover */
+    }
+</style>
+
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex justify-content-between align-items-center">
         <div class="logo">
@@ -9,8 +28,17 @@
                     100px;">
             </a>
         </div>
+        <!-- Thêm nội dung mới -->
+        <div class="header-content d-flex justify-content-between align-items-center w-100">
+            <div class="left-content">
+                <h5 class="text-white">Trường Đại học SPKT Vĩnh Long</h5>
+            </div>
+            <div class="right-content ms-auto">
+                <h5 class="text-white">Bộ Lao động Thương binh Xã hội</h5>
+            </div>
+        </div>
 
-        <nav id="navbar" class="navbar navbar-dark flex-row shadow-0">
+        <nav id="navbar" class="">
 
             <ul id="_navigationPrimary" class="_pkp_navigation_primary
                 navbar-nav ml-auto">
@@ -190,7 +218,7 @@
                                     <a
                                         href="http://tapchikhoahoc.vlute.edu.vn/index.php/tc/about"
                                         class="nav-link">
-                                        Giới thiệu
+                                        GIỚI THIỆU
                                     </a>
                                 </li>
                                 <li class="text-dark nav-item">

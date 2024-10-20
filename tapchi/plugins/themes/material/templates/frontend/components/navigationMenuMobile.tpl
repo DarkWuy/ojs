@@ -23,7 +23,15 @@
 			</div>
 			<div class="modal-body">
 	      		<div>
-		      		{capture assign="primaryMenu"}
+					<style>
+						/* Thay đổi font chữ cho thuộc tính có id = _navigationPrimary */
+						#_navigationPrimary {
+							font-family: 'Arial', sans-serif; /* Thay đổi 'Arial' thành font bạn muốn sử dụng */
+							font-size: 54px; /* Thay đổi kích thước font chữ nếu cần */
+							color: #333; /* Màu chữ */
+						}
+					</style>
+					{capture assign="primaryMenu"}
 						{load_menu name="primary" id="_navigationPrimary" ulClass="_pkp_navigation_primary d-block" liClass="text-dark"}
 					{/capture}
 

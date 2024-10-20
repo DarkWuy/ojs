@@ -279,7 +279,7 @@ msgstr "Create"
 msgid "common.dateCompleted"
 msgstr "Date completed"
 
-msgid "common.dateDecided"
+msgid "submission.dateDecided"
 msgstr "Date decided"
 
 msgid "common.date"
@@ -1966,3 +1966,60 @@ msgstr "The {$attribute} has already been taken."
 
 msgid "validator.url"
 msgstr "This is not a valid URL."
+
+msgid "journal.title"
+msgstr "Science Journal"
+
+msgid "common.contactAuthor"
+msgstr "Contact Author"
+
+msgid "submission.receivedDate"
+msgstr "ReceivedDate"
+
+msgid "submission.publicationDate"
+msgstr "Date publication"
+
+msgid "article.details.title"
+msgstr "Title"
+
+msgid "article.views"
+msgstr "Views"
+
+msgid "article.downloads"
+msgstr "Downloads"
+
+msgid "article.summary"
+msgstr "Summary"
+
+msgid "footer.journal_title"
+msgstr "JOURNAL OF SCIENCE"
+
+msgid "footer.university_name"
+msgstr "VINH LONG UNIVERSITY OF TECHNOLOGY EDUCATION"
+
+msgid "footer.management_agency"
+msgstr "Management Agency: Vinh Long University of Technology Education"
+
+msgid "footer.license_number"
+msgstr "Operating License No: xxx/GP-BTTTT dated dd-mm-2023"
+
+msgid "footer.licensing_agency"
+msgstr "Licensing Agency: Ministry of Information and Communications"
+
+msgid "footer.editor_in_chief"
+msgstr "Editor-in-Chief: Assoc. Prof. Dr. Nguyen Thanh Tung"
+
+msgid "footer.address"
+msgstr "Address: 73 Nguyen Hue, Ward 2, Vinh Long City"
+
+msgid "footer.tel"
+msgstr "Tel: (+84) 02703822141 - Fax: (+84) 02703821003"
+
+msgid "footer.website"
+msgstr "Website: http://vlute.edu.vn"
+
+msgid "footer.email"
+msgstr "Email: tapchikhoahoc@vlute.edu.vn"
+
+msgid "footer.copyright"
+msgstr "Copyright © 2023 - Designed & developed by FIT"

@@ -70,7 +70,11 @@
 		</span>
 	{/if}
 
-	{$galley->getGalleyLabel()|escape}
+	{if $currentLocale == "en_US" && $galley->getLocale() == "vi_VN"}
+		PDF (Vietnamese)
+	{else}
+		{$galley->getGalleyLabel()|escape}
+	{/if}
 
 	{if $restricted && $purchaseFee && $purchaseCurrency}
 		<span class="purchase_cost">

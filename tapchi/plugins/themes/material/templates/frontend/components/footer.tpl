@@ -27,22 +27,47 @@
     		<ul class="_pkp_structure_sidebar list-unstyled container" role="complementary" aria-label="{translate|escape key="common.navigation.sidebar"}">
     			{$sidebarCode}
     		</ul><!-- pkp_sidebar.left -->
-      </div>
+      </div>$smarty->assign('pageFooter', $pageFooter);
   	{/if}
   {/if}
 {/if}
 
-{if $requestedPage !== 'login' && $requestedPage !== 'user'}
-	<!-- ======= Footer ======= -->
-  <footer class="footer" role="contentinfo">
+<footer class="footer" role="contentinfo" style="padding: 10px 0;">
     <div class="container">
-      {if $pageFooter}
-      	{$pageFooter}
-      {/if}
+        <div class="footer-header mb-2" style="margin-bottom: 10px;">
+            <h2 class="text-left text-white font-weight-bold" style="font-size: 2.5rem;">
+                {translate key="footer.journal_title"}
+            </h2>
+            <h3 class="text-left text-white font-weight-bold" style="font-size: 1.2rem;">
+                {translate key="footer.university_name"}
+            </h3>
+        </div>
+        <hr>
+  <div class="row" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="col-md-6 footer-left">
+        <p class="text-white" style="margin: 5px 0;">{translate key="footer.management_agency"}</p>
+        <p class="text-white" style="margin: 5px 0;">{translate key="footer.license_number"}</p>
+        <p class="text-white" style="margin: 5px 0;">{translate key="footer.licensing_agency"}</p>
+        <p class="text-white" style="margin: 5px 0;">{translate key="footer.editor_in_chief"}</p>
+    </div>
+    <div class="col-md-6 footer-right" style="text-align:left; ">
+        <p class="text-white" style="margin: 5px 0; margin-left: 100px;">{translate key="footer.address"}</p>
+        <p class="text-white" style="margin: 5px 0; margin-left: 100px;">{translate key="footer.tel"}</p>
+        <p class="text-white" style="margin: 5px 0; margin-left: 100px;">{translate key="footer.website"}</p>
+        <p class="text-white" style="margin: 5px 0; margin-left: 100px;">{translate key="footer.email"}</p>
+    </div>
+</div>
+
+        </div>
+        <hr class="mt-2">
+       <div class="footer-bottom text-center mt-2">
+    <p class="text-white">{translate key="footer.copyright"}</p>
+</div>
 
     </div>
-  </footer>
-{/if}
+</footer>
+
+
 
 {load_script context="frontend"}
 

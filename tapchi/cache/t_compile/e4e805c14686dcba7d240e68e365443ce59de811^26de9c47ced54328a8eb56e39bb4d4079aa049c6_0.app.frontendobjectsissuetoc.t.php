@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-06-23 18:24:16
+/* Smarty version 4.1.0, created on 2024-10-20 16:20:53
   from 'app:frontendobjectsissuetoc.t' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6495c7302d2f20_42839518',
+  'unifunc' => 'content_671511c5809434_18915724',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '26de9c47ced54328a8eb56e39bb4d4079aa049c6' => 
     array (
       0 => 'app:frontendobjectsissuetoc.t',
-      1 => 1687537454,
+      1 => 1729434023,
       2 => 'app',
     ),
   ),
@@ -23,8 +23,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'app:frontend/objects/article_summary.tpl' => 1,
   ),
 ),false)) {
-function content_6495c7302d2f20_42839518 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\ojs\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
+function content_671511c5809434_18915724 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\tapchi1\\Newfolder\\tapchi\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 if (!$_smarty_tpl->tpl_vars['heading']->value) {?>
 	<?php $_smarty_tpl->_assignInScope('heading', "h2");
 }
@@ -151,8 +151,8 @@ $_smarty_tpl->tpl_vars['section']->do_else = false;
 			<?php if ($_smarty_tpl->tpl_vars['section']->value['title']) {?>
 				<h2 class="accordion-header" id="accordion-header-<?php echo $_smarty_tpl->tpl_vars['sectionCounter']->value;?>
 ">
-					<button class="accordion-button collapsed px-0 text-start" type="button" data-mdb-toggle="collapse" data-mdb-target="#accordion-collapse-<?php echo $_smarty_tpl->tpl_vars['sectionCounter']->value;?>
-" aria-expanded="false" aria-controls="accordion-collapse-<?php echo $_smarty_tpl->tpl_vars['sectionCounter']->value;?>
+					<button class="accordion-button px-0 text-start" type="button" data-mdb-toggle="collapse" data-mdb-target="#accordion-collapse-<?php echo $_smarty_tpl->tpl_vars['sectionCounter']->value;?>
+" aria-expanded="true" aria-controls="accordion-collapse-<?php echo $_smarty_tpl->tpl_vars['sectionCounter']->value;?>
 ">
 						<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['section']->value['title'] ));?>
 
@@ -192,6 +192,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 <div class="entry_details"> 	
 						<div class="item published">
+							<a href="#">
+							<img src="http://tapchikhoahoc.vlute.edu.vn/public/journals/1/homepageImage_vi_VN.jpg" style="width: 75%">
+							</a>
+							<hr class="my-4" />
 						 	<a href="https://scholar.google.com">
 							<img src="https://scholar.google.com/intl/vi/scholar/images/1x/scholar_logo_64dp.png" style="width: 75%">
 							</a>
@@ -206,5 +210,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 							</div>
 							
 		</div></div></div>
+
 <?php }
 }

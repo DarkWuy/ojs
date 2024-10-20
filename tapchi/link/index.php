@@ -34,7 +34,6 @@
 
 <body class="pkp_page_about pkp_op_index has_site_logo" dir="ltr">
 
-
     <!-- ======= Header ======= -->
     <?php include './include/header.html' ?>
     <main class="" role="main">

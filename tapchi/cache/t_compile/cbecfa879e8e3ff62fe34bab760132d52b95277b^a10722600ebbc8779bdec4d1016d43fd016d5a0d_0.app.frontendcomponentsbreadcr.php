@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-04-25 17:07:13
+/* Smarty version 4.1.0, created on 2024-10-20 16:20:45
   from 'app:frontendcomponentsbreadcr' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6447eca1c79a12_73904628',
+  'unifunc' => 'content_671511bddec9e2_69231175',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a10722600ebbc8779bdec4d1016d43fd016d5a0d' => 
     array (
       0 => 'app:frontendcomponentsbreadcr',
-      1 => 1675470469,
+      1 => 1729434021,
       2 => 'app',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6447eca1c79a12_73904628 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671511bddec9e2_69231175 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="cmp_breadcrumbs" role="navigation" aria-label="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"navigation.breadcrumbLabel"),$_smarty_tpl ) );?>
 ">
-	<ol>
+	<ol class="breadcrumb">
 		<li>
 			<a href="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['url'][0], array( array('page'=>"index",'router'=>(defined('ROUTE_PAGE') ? constant('ROUTE_PAGE') : null)),$_smarty_tpl ) );?>
 ">

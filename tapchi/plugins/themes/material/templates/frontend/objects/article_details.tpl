@@ -65,9 +65,26 @@
  *   included with published submissions.
  * @uses $ccLicenseBadge string An image and text with details about the license
  *}
- {if !$heading}
- 	{assign var="heading" value="h3"}
- {/if}
+
+{* Thêm đoạn mã CSS này vào đầu file *}
+<style>
+    .obj_article_details h2, .obj_article_details ul li{
+        font-size: calc(1em + 1px);
+		color: #4f4f4f;
+    }
+	.obj_article_details p{
+		font-size: calc(1em + 2px);
+		color: #4f4f4f;
+	}
+	.obj_article_details h3 , .obj_article_details h4{
+		color: #4f4f4f;
+	}
+</style>
+
+{* Phần còn lại của template giữ nguyên *}
+{if !$heading}
+    {assign var="heading" value="h3"}
+{/if}
 <article class="obj_article_details">
 
 	{* Indicate if this is only a preview *}
@@ -90,14 +107,35 @@
 	<div class="d-md-flex">
 		<div class="main_entry">
 			<section class="item">
-				<h3 class="page_title">
-					{$publication->getLocalizedTitle()|escape}
+				<h3  class="page_title">
+					<strong>{$publication->getLocalizedTitle()|escape}</strong>
 				</h3>
 
 				{if $publication->getLocalizedData('subtitle')}
 					<h4 class="subtitle">
 						{$publication->getLocalizedData('subtitle')|escape}
 					</h4>
+				{/if}
+
+				{* Add author names *}
+				{if $publication->getData('authors')}
+					<div class="authors">
+						{assign var=authorCount value=$publication->getData('authors')|@count}
+						{foreach from=$publication->getData('authors') item=author name=authors}
+							<span class="author">
+								{$author->getFullName()|escape}
+							</span>
+							{if $authorCount == 2 && !$smarty.foreach.authors.last}
+								{translate key="common.and"}
+							{elseif $authorCount > 2}
+								{if $smarty.foreach.authors.iteration == $authorCount - 1}
+									{translate key="common.and"}
+								{elseif !$smarty.foreach.authors.last}
+									,
+								{/if}
+							{/if}
+						{/foreach}
+					</div>
 				{/if}
 			</section> 
 
@@ -107,23 +145,10 @@
 					<ul class="authors">
 					{foreach from=$publication->getData('authors') item=author}
 						<li>
-							<span class="name">
-								{$author->getFullName()|escape}
-							</span>
-							{if $author->getLocalizedData('affiliation')}
-								<span class="affiliation">
-									{$author->getLocalizedData('affiliation')|escape}
-									{if $author->getData('rorId')}
-										<a href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
-									{/if}
-								</span>
-							{/if}
-							{if $author->getData('orcid')}
-								<span class="orcid">
-									{$orcidIcon}
-									<a href="{$author->getData('orcid')|escape}" target="_blank">
-										{$author->getData('orcid')|escape}
-									</a>
+							{* Add author's email *}
+							{if $author->getEmail()}
+								<span class="email">
+									{translate key="common.contactAuthor"}: <a href="mailto:{$author->getEmail()|escape}">{$author->getEmail()|escape}</a>
 								</span>
 							{/if}
 						</li>
@@ -158,8 +183,10 @@
 			{if !empty($publication->getLocalizedData('keywords'))}
 			<section class="item keywords">
 				<h4 class="_label">
+					<strong>
 					{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
 					{translate key="semicolon" label=$translatedKeywords}
+					</strong>
 				</h4>
 				<span class="value">
 					{foreach name="keywords" from=$publication->getLocalizedData('keywords') item="keyword"}
@@ -172,7 +199,7 @@
 			{* Abstract *}
 			{if $publication->getLocalizedData('abstract')}
 				<section class="item abstract">
-					<h4 class="_label">{translate key="article.abstract"}</h4>
+					<h4 class="_label"> <strong>{translate key="article.abstract"}</strong></h4>
 					{$publication->getLocalizedData('abstract')|strip_unsafe_html}
 				</section>
 			{/if}
@@ -189,11 +216,13 @@
 			{if $hasBiographies}
 				<section class="item author_bios">
 					<h4 class="_label">
+						<strong>
 						{if $hasBiographies > 1}
 							{translate key="submission.authorBiographies"}
 						{else}
 							{translate key="submission.authorBiography"}
 						{/if}
+						</strong>
 					</h4>
 					{foreach from=$publication->getData('authors') item=author}
 						{if $author->getLocalizedData('biography')}
@@ -286,48 +315,20 @@
 				</div>
 			{/if}
 
-			{if $publication->getData('datePublished')}
-			<div class="item published">
-				<section class="sub_item">
-					<h2 class="label">
-						{translate key="submissions.published"}
-					</h2>
-					<div class="value">
-						{* If this is the original version *}
-						{if $firstPublication->getID() === $publication->getId()}
-							<span>{$firstPublication->getData('datePublished')|date_format:$dateFormatShort}</span>
-						{* If this is an updated version *}
-						{else}
-							<span>{translate key="submission.updatedOn" datePublished=$firstPublication->getData('datePublished')|date_format:$dateFormatShort dateUpdated=$publication->getData('datePublished')|date_format:$dateFormatShort}</span>
-						{/if}
-					</div>
-					<div>
-					Lượt xem: {$article->getViews()}
-					</div>
-				</section>
-				{if count($article->getPublishedPublications()) > 1}
-					<section class="sub_item versions">
-						<h2 class="label">
-							{translate key="submission.versions"}
-						</h2>
-						<ul class="value">
-							{foreach from=array_reverse($article->getPublishedPublications()) item=iPublication}
-								{capture assign="name"}{translate key="submission.versionIdentity" datePublished=$iPublication->getData('datePublished')|date_format:$dateFormatShort version=$iPublication->getData('version')}{/capture}
-								<li>
-									{if $iPublication->getId() === $publication->getId()}
-										{$name}
-									{elseif $iPublication->getId() === $currentPublication->getId()}
-										<a href="{url page="article" op="view" path=$article->getBestId()}">{$name}</a>
-									{else}
-										<a href="{url page="article" op="view" path=$article->getBestId()|to_array:"version":$iPublication->getId()}">{$name}</a>
-									{/if}
-								</li>
-							{/foreach}
-						</ul>
-					</section>
-				{/if}
-			</div>
-			{/if}
+			{* New section for article details *}
+<div class="item article_info">
+    <h2 class="label">{translate key="article.details"}</h2>
+    <ul class="value">
+        <li><strong>{translate key="submission.receivedDate"}:</strong> {$article->getDateSubmitted()|date_format:"%d-%m-%Y"}</li>
+        <li><strong>{translate key="submission.lastModified"}:</strong> {$article->getLastModified()|date_format:"%d-%m-%Y"}</li>
+        <li><strong>{translate key="submission.editorDecision.dateDecided"}:</strong> {$article->getDateStatusModified()|date_format:"%d-%m-%Y"}</li>
+        <li><strong>{translate key="submission.publicationDate"}:</strong> {$publication->getData('datePublished')|date_format:"%d-%m-%Y"}</li>
+        <li><strong>{translate key="article.details.title"}:</strong> {$publication->getLocalizedTitle()|escape}</li>
+        <li><strong>DOI:</strong> {$pubId|escape}</li>
+        <li><strong>{translate key="article.views"}:</strong> {$article->getViews()}</li>
+        <li><strong>{translate key="article.downloads"}:</strong> {$article->getViews('pdf')}</li>
+    </ul>
+</div>
 
 			{* How to cite *}
 			{if $citation}

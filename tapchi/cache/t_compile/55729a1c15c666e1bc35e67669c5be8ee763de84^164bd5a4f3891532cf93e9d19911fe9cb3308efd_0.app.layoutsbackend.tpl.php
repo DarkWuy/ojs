@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-06-11 12:29:32
+/* Smarty version 4.1.0, created on 2024-10-20 12:46:08
   from 'app:layoutsbackend.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6485a20c7c3e14_95048759',
+  'unifunc' => 'content_6714df708e2468_20949581',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '164bd5a4f3891532cf93e9d19911fe9cb3308efd' => 
     array (
       0 => 'app:layoutsbackend.tpl',
-      1 => 1686385971,
+      1 => 1729413826,
       2 => 'app',
     ),
   ),
@@ -22,8 +22,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'app:common/loadingContainer.tpl' => 1,
   ),
 ),false)) {
-function content_6485a20c7c3e14_95048759 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\ojs\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
+function content_6714df708e2468_20949581 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\tapchi1\\Newfolder\\tapchi\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -66,7 +66,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 >
 
 	<div id="app" class="app <?php if ($_smarty_tpl->tpl_vars['isLoggedInAs']->value) {?> app--isLoggedInAs<?php }?>">
-		<header class="app__header" role="banner">
+		<header class="app__header" role="banner" style="background-color: #070758;">
 			<?php if ($_smarty_tpl->tpl_vars['availableContexts']->value) {?>
 				<dropdown class="app__headerAction app__contexts" v-cloak>
 					<template slot="button">
@@ -223,7 +223,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 		<div class="app__body">
 			<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14898501306485a20c7b6d06_41947551', "menu");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10361510806714df708d5a41_89879616', "menu");
 ?>
 
 
@@ -231,12 +231,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14898501306485a20c
 				<div class="app__page<?php if ($_smarty_tpl->tpl_vars['pageWidth']->value) {?> app__page--<?php echo $_smarty_tpl->tpl_vars['pageWidth']->value;
 }?>">
 					<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11727514466485a20c7b8d49_05915996', "breadcrumbs");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8277676056714df708d6ee1_39967255', "breadcrumbs");
 ?>
 
 
 					<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7067415466485a20c7bdaa6_58440468', "page");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10509434296714df708da690_00465258', "page");
 ?>
 
 
@@ -331,12 +331,12 @@ appMain.classList.toggle('active'); /* Thêm hoặc xóa class 'active' */
 
 <?php }
 /* {block "menu"} */
-class Block_14898501306485a20c7b6d06_41947551 extends Smarty_Internal_Block
+class Block_10361510806714df708d5a41_89879616 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_14898501306485a20c7b6d06_41947551',
+    0 => 'Block_10361510806714df708d5a41_89879616',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -366,9 +366,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 										<ul>
 						<li>
 							<ul>
-								<li >
-									<a class="app__navItem"href="http://localhost/link/admin/">
-									Quản trị đường dẫn 
+									<li>
+									<a class="app__navItem" href="http://localhost/link/admin/">
+										<?php if ($_smarty_tpl->tpl_vars['currentLocale']->value == 'vi_VN') {?>
+											Quản trị đường dẫn
+										<?php } else { ?>
+											Path Management
+										<?php }?>
 									</a>
 								</li>
 							</ul>
@@ -380,12 +384,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "menu"} */
 /* {block "breadcrumbs"} */
-class Block_11727514466485a20c7b8d49_05915996 extends Smarty_Internal_Block
+class Block_8277676056714df708d6ee1_39967255 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'breadcrumbs' => 
   array (
-    0 => 'Block_11727514466485a20c7b8d49_05915996',
+    0 => 'Block_8277676056714df708d6ee1_39967255',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -432,12 +436,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "breadcrumbs"} */
 /* {block "page"} */
-class Block_7067415466485a20c7bdaa6_58440468 extends Smarty_Internal_Block
+class Block_10509434296714df708da690_00465258 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'page' => 
   array (
-    0 => 'Block_7067415466485a20c7bdaa6_58440468',
+    0 => 'Block_10509434296714df708da690_00465258',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
