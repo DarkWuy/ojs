@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2024-10-20 12:36:05
+/* Smarty version 4.1.0, created on 2024-10-20 17:18:12
   from 'app:controllerspagetasks.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6714dd15e33b09_55803965',
+  'unifunc' => 'content_67151f3490f905_43336525',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ff1cb192ef33fc9e3d92436bc42c54efdb4c274b' => 
     array (
       0 => 'app:controllerspagetasks.tpl',
-      1 => 1729413804,
+      1 => 1729434021,
       2 => 'app',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6714dd15e33b09_55803965 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67151f3490f905_43336525 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, 'default', 'notificationsGridUrl', null);
 echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['url'][0], array( array('router'=>(defined('ROUTE_COMPONENT') ? constant('ROUTE_COMPONENT') : null),'component'=>"grid.notifications.TaskNotificationsGridHandler",'op'=>"fetchGrid",'escape'=>false),$_smarty_tpl ) );
 $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);

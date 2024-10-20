@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-04-27 06:23:44
+/* Smarty version 4.1.0, created on 2024-10-20 17:18:13
   from 'app:controllersgridgridAction' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6449f8d027ccc2_55306575',
+  'unifunc' => 'content_67151f35bdd080_83684003',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df267c1c85b8073ee78f8a0ada089bcd44a12b53' => 
     array (
       0 => 'app:controllersgridgridAction',
-      1 => 1675470469,
+      1 => 1729434021,
       2 => 'app',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'app:linkAction/linkAction.tpl' => 1,
   ),
 ),false)) {
-function content_6449f8d027ccc2_55306575 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67151f35bdd080_83684003 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <ul class="actions btm">
 	<?php

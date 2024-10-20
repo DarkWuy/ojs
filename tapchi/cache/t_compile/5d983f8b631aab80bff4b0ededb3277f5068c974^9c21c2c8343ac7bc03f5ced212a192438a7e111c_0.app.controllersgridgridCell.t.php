@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2023-04-25 16:45:52
+/* Smarty version 4.1.0, created on 2024-10-20 17:18:12
   from 'app:controllersgridgridCell.t' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6447e7a0bcad15_38808823',
+  'unifunc' => 'content_67151f34e5d353_07895429',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9c21c2c8343ac7bc03f5ced212a192438a7e111c' => 
     array (
       0 => 'app:controllersgridgridCell.t',
-      1 => 1675470469,
+      1 => 1729434021,
       2 => 'app',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'app:controllers/grid/gridCellContents.tpl' => 1,
   ),
 ),false)) {
-function content_6447e7a0bcad15_38808823 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67151f34e5d353_07895429 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['id']->value) {?>
 	<?php $_smarty_tpl->_assignInScope('cellId', call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'concat' ][ 0 ], array( "cell-",$_smarty_tpl->tpl_vars['id']->value )));
 } else { ?>
